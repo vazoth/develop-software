@@ -1,0 +1,4 @@
+interface:
+  display_name: "Develop Software"
+  short_description: "Research, plan, and review software product development"
+  default_prompt: "Use $develop-software to research and plan this software product, reviewing both the research and the plan before implementation."

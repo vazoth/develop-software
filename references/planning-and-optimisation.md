@@ -1,0 +1,27 @@
+# Planning and optimisation
+
+## Design around the product people will use
+
+Work from representative user situations and their end-to-end workflows. Include meaningful setup and failure states. Ask what people need to bring in, produce, export or recover and what happens when a dependency, connection or input fails. Validate important assumptions against available user evidence, workflows and constraints. When direct evidence is unavailable, make assumptions visible and link them to the decisions they influence.
+
+Translate desired quality into observable outcomes under representative conditions. Performance needs a workload and environment. Accessibility needs relevant tasks and users. Portability covers the product people can actually install and run on intended hosts, including distribution, system dependencies, and support. Consider discoverable setup, interoperability, user ownership and export of data, recovery, migration and upgrades, ongoing maintenance, and security when they affect the product. Scope each to the actual users, operating environment and consequences. For example, a local tool with private files and an internet-facing shared service have different likely failures and maintenance needs.
+
+## Compare delivery paths as complete systems
+
+Design enough of each serious candidate to understand its material dependencies. Follow the same representative workflow through each architecture, including seams for identity, data model and lifecycle, ordering and timing, failure propagation, persistence, deployment and upgrades as applicable. Describe where a translation would lose information, where an interface becomes a long-term compatibility promise, and where a platform requires a different build, dependency, replacement or fallback. Evaluate the combined design and its behavior. Component rankings alone cannot establish system fit.
+
+Compare options against required outcomes first. Describe meaningful differences in user quality, headroom and total future effort. Include research and implementation, integration, licensing and dependency obligations, verification, packaging, release, user installation, adaptation and operation, support and long-term maintenance where applicable. Compare the evidence and plausible effort ranges for a relevant horizon. An established component's working behavior is evidence. Its earlier cost is sunk, while the costs to switch or maintain two paths are prospective and count in the comparison.
+
+Discard dominated options when the evidence supports it. For live tradeoffs, say whose priorities determine the choice and how uncertainty can move it. Use common units when the underlying measurements are comparable. Keep unlike effects explicit and linked to concrete user or operating outcomes. Avoid assigning weights without a basis in owner priorities or real costs. A recommendation is conditional on the options, evidence and priorities examined. For example, a native package may cut install failures but raise the per-platform maintenance cost. Estimate both, explain the affected users, and identify the assumption that would change the recommendation. Where evidence is weak, identify the best reversible step or the strongest case for waiting.
+
+## Use probes to resolve a choice
+
+A probe should name the decision, the competing explanations or approaches, the test conditions, the observations that would favor each path, and what remains outside the probe. Verify that the scope authorizes the execution and respect actual permissions and costs. Prefer the smallest work that discriminates. Inspecting a build graph may establish whether an extraction is plausible. A small representative packaging or compatibility check may resolve what inspection leaves uncertain. Measure with comparable inputs and configurations when a result will rank alternatives.
+
+Record probe conditions and results. A component measurement informs system expectations only under stated assumptions. A prototype can help answer a question without creating a product commitment. Adopting its dependencies, publishing it, or starting production implementation is a separate action governed by task scope.
+
+## Plan the evidence and delivery together
+
+Specify the chosen product and why it is worth its prospective effort. Keep the strongest alternative and the conditions under which it becomes preferable. Identify unresolved dependencies or assumptions, and sequence work by which evidence can change a costly commitment. For each consequential delivery outcome, define who can independently evaluate it and what real behavior and supported conditions would demonstrate it. Use project records and checks that already serve this purpose. Apply independent plan review before requesting or acting on the owner's authorization to implement.
+
+For related foundations, see [SEI's Architecture Tradeoff Analysis Method](https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/) on quality scenarios and interactions, and [NASA's decision analysis guidance](https://www.nasa.gov/reference/6-8-decision-analysis/) on alternatives, uncertainty and proportionate analysis. Use relevant reasoning from these methods without importing their full institutional processes.
