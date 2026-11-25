@@ -4,9 +4,27 @@ A Codex skill for researching, planning and developing independent software prod
 
 Research can draw on products, source code, papers, books, standards, observations and other relevant knowledge. Reuse can happen at any abstraction level: whole systems, components, architecture, algorithms, source fragments, techniques or insights. Planning and implementation can reopen research when new evidence changes the decision.
 
-## Use
+## Install
 
-Install this repository as a skill folder named `develop-software` in your agent's skills directory. In Codex, the default location is `~/.codex/skills/develop-software`. Keep `SKILL.md`, `agents/` and `references/` together.
+### Public installation
+
+Use a separate installed copy for normal use. In Codex, ask `$skill-installer` to install the root of `vazoth/develop-software` as `develop-software`, selecting a release tag or full commit SHA. The installer's corresponding options are `--repo vazoth/develop-software --path . --name develop-software --ref <tag-or-commit>`.
+
+The default destination is `~/.codex/skills/develop-software`, or `$CODEX_HOME/skills/develop-software` when configured. Keep `SKILL.md`, `agents/` and `references/` together. Choose and verify a new revision before replacing an existing installation. An installed copy stays stable while the source repository changes.
+
+### Maintainer checkout
+
+A symlink is convenient when developing the skill: source edits become available on subsequent reads without recopying the files. For a checkout at `~/Dev/develop-software`, ensure the skills directory exists and the destination path is unused, then run:
+
+```sh
+ln -s "$HOME/Dev/develop-software" "${CODEX_HOME:-$HOME/.codex}/skills/develop-software"
+```
+
+Use a separate copy pinned to a recorded commit when evaluating a fixed version. Both installation methods are supported; neither requires a custom installer or a `REVISION` file.
+
+After installation, the skill is available on the next turn.
+
+## Use
 
 Invoke it with a product brief, for example:
 
