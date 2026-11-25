@@ -9,6 +9,8 @@ Develop a product people can install, use, and maintain in its intended environm
 
 For consequential choices, compare the effort needed across development, integration, release, use, support and maintenance, together with the finished quality each option can achieve. Include performance wherever it affects users or operating cost. Treat required quality as a floor and evaluate improvements beyond it when their value warrants the effort. Changes to a requirement belong with its owner. Explain tradeoffs and uncertainties in terms the owner can act on.
 
+Produce requested review drafts even when independent review is still pending. A request for a combined research-and-plan draft also permits provisional design work that helps expose research questions. Label unsettled findings and review status clearly. Delivering such a draft does not settle the choices, complete a review, or authorize implementation. The checkpoints below govern commitments and transitions, not the preparation of material for review.
+
 ## Research
 
 Read [Research and reuse](references/research-and-reuse.md) for discovery, source evaluation, and adaptation assessments.
