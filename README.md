@@ -6,21 +6,9 @@ Research can draw on products, source code, papers, books, standards, observatio
 
 ## Install
 
-### Public installation
-
 Use a separate installed copy for normal use. In Codex, ask `$skill-installer` to install the root of `vazoth/develop-software` as `develop-software`, selecting a release tag or full commit SHA. The installer's corresponding options are `--repo vazoth/develop-software --path . --name develop-software --ref <tag-or-commit>`.
 
 The default destination is `~/.codex/skills/develop-software`, or `$CODEX_HOME/skills/develop-software` when configured. Keep `SKILL.md`, `agents/` and `references/` together. Choose and verify a new revision before replacing an existing installation. An installed copy stays stable while the source repository changes.
-
-### Maintainer checkout
-
-A symlink is convenient when developing the skill: source edits become available on subsequent reads without recopying the files. For a checkout at `~/Dev/develop-software`, ensure the skills directory exists and the destination path is unused, then run:
-
-```sh
-ln -s "$HOME/Dev/develop-software" "${CODEX_HOME:-$HOME/.codex}/skills/develop-software"
-```
-
-Use a separate copy pinned to a recorded commit when evaluating a fixed version. Both installation methods are supported; neither requires a custom installer or a `REVISION` file.
 
 After installation, the skill is available on the next turn.
 
@@ -40,7 +28,3 @@ For an agent without skill discovery, start by reading [SKILL.md](SKILL.md). The
 - [Research and reuse](references/research-and-reuse.md): discovery, source evidence, reasoning and concrete adaptation assessment.
 - [Planning and optimisation](references/planning-and-optimisation.md): whole-product alternatives, total effort, quality and delivery sequencing.
 - [Review and reopening](references/review-and-reopening.md): independent review, resolving objections and revisiting decisions.
-
-## Maintaining the skill
-
-Keep general instructions here and product-specific evidence in the product's own records. Inspect any affected reference when changing the entry point. Validate meaningful changes by having an independent agent use the skill on a realistic, bounded request; inspect its decisions and actual output, then repair demonstrated weaknesses. A well-formed skill file alone does not establish good research or planning behavior.
